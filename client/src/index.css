@@ -1,0 +1,163 @@
+/*
+ * DESIGN PHILOSOPHY: Soft Botanical Editorial
+ * Movement: Quiet Luxury / Contemporary Stationery
+ * Palette: Pale sage (#eef1ec) bg, deep forest green (#3a5c35) text/UI, white cards
+ * Typography: Playfair Display Bold (display) + Cormorant Garamond Italic (script) + Lora (body) + DM Sans (labels)
+ * Layout: Asymmetric hero, marquee strip, feature cards, full-bleed CTA band
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand palette */
+  --sage-light: #eef1ec;
+  --sage-mid: #d4ddd0;
+  --forest: #3a5c35;
+  --forest-dark: #2d4a28;
+  --forest-light: #4f7848;
+  --cream: #faf8f4;
+  --warm-white: #ffffff;
+
+  /* Semantic tokens */
+  --background: #eef1ec;
+  --foreground: #2d4a28;
+  --card: #ffffff;
+  --card-foreground: #2d4a28;
+  --popover: #ffffff;
+  --popover-foreground: #2d4a28;
+  --primary: #3a5c35;
+  --primary-foreground: #ffffff;
+  --secondary: #d4ddd0;
+  --secondary-foreground: #2d4a28;
+  --muted: #e2e8df;
+  --muted-foreground: #5a7a54;
+  --accent: #d4ddd0;
+  --accent-foreground: #2d4a28;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #c8d4c4;
+  --input: #c8d4c4;
+  --ring: #3a5c35;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lora', Georgia, serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  a[href],
+  select:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Marquee animation */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Fade-up entrance animation */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fade-up {
+    animation: fadeUp 0.7s ease forwards;
+  }
+  .fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .fade-up-delay-2 { animation-delay: 0.25s; opacity: 0; }
+  .fade-up-delay-3 { animation-delay: 0.4s; opacity: 0; }
+  .fade-up-delay-4 { animation-delay: 0.55s; opacity: 0; }
+
+  /* Font families */
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-script {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+  }
+  .font-body {
+    font-family: 'Lora', Georgia, serif;
+  }
+  .font-label {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
