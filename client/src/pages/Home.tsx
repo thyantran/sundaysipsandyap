@@ -392,7 +392,7 @@ export default function Home() {
           </FadeSection>
           <FadeSection delay={150}>
             <p className="font-body text-base leading-relaxed" style={{ color: "#c8ddc4", maxWidth: "44ch" }}>
-              Sunday Sips &amp; Yap is the cutest way to explore Orange County with your bestie — and make memories worth keeping.
+              Sunday Sips &amp; Yap is the cutest way to explore Orange County with your bestie and make memories worth keeping.
             </p>
           </FadeSection>
           <FadeSection delay={280}>
