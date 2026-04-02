@@ -7,7 +7,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/hero-product-mockup-P3Mo9LTNwH6LGbQzevD946.webp";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/cover-photo_bcd733d4.png";
 const LIFESTYLE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/coffee-shop-lifestyle-7PuBeJw6MsARi4NpBbACWG.webp";
 const JOURNAL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/journal-detail-EA2LTuaAoq5YSbAaKg2EQg.webp";
 
