@@ -253,7 +253,7 @@ export default function Home() {
             {
               icon: "☕",
               title: "10 Coffee Shops",
-              body: "Curated guide to 10 of the cutest independent coffee spots in Orange County — each with its own dedicated spread.",
+              body: "Curated guide to 10 of the cutest independent coffee spots in Orange County, each with its own dedicated spread.",
             },
             {
               icon: "⭐",
@@ -263,7 +263,7 @@ export default function Home() {
             {
               icon: "💬",
               title: "3 Journal Prompts",
-              body: "Each spot includes prompts that spark real conversation — the kind that brings you and your bestie closer.",
+              body: "Each spot includes prompts that spark real conversation, the kind that brings you and your bestie closer.",
             },
           ].map((card, i) => (
             <FadeSection key={i} delay={i * 120}>
@@ -314,7 +314,7 @@ export default function Home() {
             <div className="flex flex-col gap-8">
               {[
                 { num: "01", title: "Pick a spot", body: "Choose one of the 10 featured OC coffee shops and head there with your bestie." },
-                { num: "02", title: "Sip & rate", body: "Order your drinks, soak in the vibes, and fill in your ratings — taste, service, ambiance, and more." },
+                { num: "02", title: "Sip & rate", body: "Order your drinks, soak in the vibes, and fill in your ratings, taste, service, ambiance, and more." },
                 { num: "03", title: "Yap together", body: "Work through the 3 journal prompts. Go deep, go funny, go wherever the conversation takes you." },
                 { num: "04", title: "Keep the memory", body: "Write it all down and keep your passport as a keepsake of every spot you've explored together." },
               ].map((step, i) => (
@@ -361,7 +361,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#3a5c35", maxWidth: "40ch" }}>
-                Grab one for yourself and use it with different girlfriends at different spots — or each get your own and document every visit together. Either way, it's the cutest gift.
+                Grab one for yourself and use it with different girlfriends at different spots, or each get your own and document every visit together. Either way, it's the cutest gift.
               </p>
               <a
                 href="#buy-section"
