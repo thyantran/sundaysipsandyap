@@ -159,6 +159,7 @@ export default function Home() {
               <a
                 id="buy"
                 href="https://buy.stripe.com/4gM9ATeZr9XE4s08qncfK00"
+                target="_blank"
                 className="font-label font-medium px-8 py-3.5 rounded-full transition-all duration-200 text-base"
                 style={{ background: "#3a5c35", color: "#ffffff", letterSpacing: "0.04em" }}
                 onMouseEnter={e => { e.currentTarget.style.background = "#4f7848"; e.currentTarget.style.transform = "scale(1.03)"; }}
@@ -365,6 +366,7 @@ export default function Home() {
               </p>
               <a
                 href="https://buy.stripe.com/4gM9ATeZr9XE4s08qncfK00"
+                target="_blank"
                 className="inline-block font-label font-medium px-8 py-3.5 rounded-full transition-all duration-200 text-base"
                 style={{ background: "#3a5c35", color: "#ffffff", letterSpacing: "0.04em" }}
                 onMouseEnter={e => { e.currentTarget.style.background = "#4f7848"; e.currentTarget.style.transform = "scale(1.03)"; }}
