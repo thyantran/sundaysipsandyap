@@ -8,7 +8,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/cover-photo_bcd733d4.png";
-const LIFESTYLE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/coffee-shop-lifestyle-7PuBeJw6MsARi4NpBbACWG.webp";
+const LIFESTYLE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/journal-notes-lifestyle_b453a3a5.png";
 const JOURNAL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/lifestyle-photo_54501c12.png";
 
 // Iced coffee cup SVG illustration (from product cover style)
