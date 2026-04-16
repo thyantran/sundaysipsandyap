@@ -285,7 +285,7 @@ export default function Home() {
       {/* ── LIFESTYLE IMAGE ── */}
       <section className="container pb-20">
         <FadeSection>
-          <div className="rounded-3xl overflow-hidden" style={{ maxHeight: 480 }}>
+          <div className="rounded-3xl overflow-hidden" style={{ maxHeight: 600 }}>
             <img
               src={LIFESTYLE_IMG}
               alt="Two friends journaling together at a coffee shop"
