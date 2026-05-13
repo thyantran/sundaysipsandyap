@@ -7,10 +7,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const HERO_IMG = "/manus-storage/DSC06796_0b6c4fc6.jpeg";
-const INSIDE_PAGE_IMG = "/manus-storage/DSC06805_1e1915f6.jpeg";
-const MOONGOAT_IMG = "/manus-storage/DSC06841_c6e9c682.jpeg";
-const COFFEE_SHOP_IMG = "/manus-storage/DSC06830_850d3e26.JPG";
+const HERO_IMG = "https://i.imgur.com/pM5TkpP.jpeg";
+const INSIDE_PAGE_IMG = "https://i.imgur.com/5dwUzAD.jpeg";
+const MOONGOAT_IMG = "https://i.imgur.com/5zXtLqC.jpeg";
+const COFFEE_SHOP_IMG = "https://i.imgur.com/uULVRSt.jpeg";
+const FORM_IMG = "https://i.imgur.com/QaMrX1c.jpeg";
 
 // Iced coffee cup SVG illustration (from product cover style)
 function CoffeeCupIllustration({ className = "" }: { className?: string }) {
@@ -338,8 +339,8 @@ export default function Home() {
 
             <FadeSection delay={200}>
               <img
-                src={MOONGOAT_IMG}
-                alt="Moongoat itinerary journal spread"
+                src={FORM_IMG}
+                alt="Sunday Sips & Yap journal form with coffee illustration"
                 className="w-full rounded-2xl shadow-xl"
                 style={{ objectFit: "cover", aspectRatio: "4/3" }}
               />
