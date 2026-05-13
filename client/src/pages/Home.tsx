@@ -7,9 +7,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/cover-photo_bcd733d4.png";
-const LIFESTYLE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/journal-notes-lifestyle_b453a3a5.png";
-const JOURNAL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663351570812/KbcYMkac7PodLc322qvUic/lifestyle-photo_54501c12.png";
+const HERO_IMG = "/manus-storage/DSC06796_0b6c4fc6.jpeg";
+const INSIDE_PAGE_IMG = "/manus-storage/DSC06805_1e1915f6.jpeg";
+const MOONGOAT_IMG = "/manus-storage/DSC06841_c6e9c682.jpeg";
+const COFFEE_SHOP_IMG = "/manus-storage/DSC06830_850d3e26.JPG";
 
 // Iced coffee cup SVG illustration (from product cover style)
 function CoffeeCupIllustration({ className = "" }: { className?: string }) {
@@ -144,7 +145,7 @@ export default function Home() {
               }}
             >
               <p className="font-body text-base md:text-lg leading-relaxed" style={{ color: "#3a5c35", maxWidth: "38ch" }}>
-                A passport-style coffee shop guide for you and your bestie. Visit 10 of the cutest spots in Orange County, rate your experience, and journal together.
+                For the girlies who are actively invested in true friendships. Visit 10 of the cutest coffee shops in Orange County, rate the vibes, and keep memories worth talking about.
               </p>
             </div>
 
@@ -160,6 +161,7 @@ export default function Home() {
                 id="buy"
                 href="https://buy.stripe.com/4gM9ATeZr9XE4s08qncfK00"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="font-label font-medium px-8 py-3.5 rounded-full transition-all duration-200 text-base"
                 style={{ background: "#3a5c35", color: "#ffffff", letterSpacing: "0.04em" }}
                 onMouseEnter={e => { e.currentTarget.style.background = "#4f7848"; e.currentTarget.style.transform = "scale(1.03)"; }}
@@ -169,10 +171,10 @@ export default function Home() {
               </a>
               <div className="flex flex-col">
                 <span className="font-label text-xs" style={{ color: "#5a7a54", letterSpacing: "0.05em" }}>
-                  <span style={{ textDecoration: "line-through", opacity: 0.6 }}>Regular price</span>
+                  <span style={{ textDecoration: "line-through", opacity: 0.6 }}>$24</span>
                 </span>
                 <span className="font-label font-medium text-sm" style={{ color: "#2d4a28" }}>
-                  10% off — limited time
+                  $21.60 with promo code
                 </span>
               </div>
             </div>
@@ -241,10 +243,10 @@ export default function Home() {
         <FadeSection className="mb-14">
           <p className="font-label text-xs tracking-widest uppercase mb-2" style={{ color: "#5a7a54", letterSpacing: "0.2em" }}>what's inside</p>
           <h2 className="font-display font-bold" style={{ color: "#2d4a28", fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-            More than a guide.
+            Three journal prompts.
             <br />
             <span className="font-script font-normal" style={{ color: "#3a5c35", fontSize: "clamp(1.8rem, 3.5vw, 2.7rem)" }}>
-              it's a memory you keep.
+              conversations that matter.
             </span>
           </h2>
         </FadeSection>
@@ -254,7 +256,7 @@ export default function Home() {
             {
               icon: "☕",
               title: "10 Coffee Shops",
-              body: "Curated guide to 10 of the cutest independent coffee spots in Orange County, each with its own dedicated spread.",
+              body: "Curated guide to 10 of the cutest independent coffee spots in Orange County — each with its own dedicated spread.",
             },
             {
               icon: "⭐",
@@ -264,7 +266,7 @@ export default function Home() {
             {
               icon: "💬",
               title: "3 Journal Prompts",
-              body: "Each spot includes prompts that spark real conversation, the kind that brings you and your bestie closer.",
+              body: "Each spot includes prompts that spark real conversation — the kind that brings you and your bestie closer.",
             },
           ].map((card, i) => (
             <FadeSection key={i} delay={i * 120}>
@@ -283,15 +285,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── LIFESTYLE IMAGE ── */}
+      {/* ── INSIDE PAGE IMAGE ── */}
       <section className="container pb-20">
         <FadeSection>
-          <div className="rounded-3xl overflow-hidden" style={{ maxHeight: 600 }}>
+          <div className="rounded-3xl overflow-hidden">
             <img
-              src={LIFESTYLE_IMG}
-              alt="Two friends journaling together at a coffee shop"
+              src={INSIDE_PAGE_IMG}
+              alt="Sunday Sips & Yap inside page with hey girls message"
               className="w-full object-cover"
-              style={{ height: 480 }}
+              style={{ maxHeight: 500 }}
             />
           </div>
         </FadeSection>
@@ -315,7 +317,7 @@ export default function Home() {
             <div className="flex flex-col gap-8">
               {[
                 { num: "01", title: "Pick a spot", body: "Choose one of the 10 featured OC coffee shops and head there with your bestie." },
-                { num: "02", title: "Sip & rate", body: "Order your drinks, soak in the vibes, and fill in your ratings, taste, service, ambiance, and more." },
+                { num: "02", title: "Sip & rate", body: "Order your drinks, soak in the vibes, and fill in your ratings — taste, service, ambiance, and more." },
                 { num: "03", title: "Yap together", body: "Work through the 3 journal prompts. Go deep, go funny, go wherever the conversation takes you." },
                 { num: "04", title: "Keep the memory", body: "Write it all down and keep your passport as a keepsake of every spot you've explored together." },
               ].map((step, i) => (
@@ -336,14 +338,28 @@ export default function Home() {
 
             <FadeSection delay={200}>
               <img
-                src={JOURNAL_IMG}
-                alt="Sunday Sips journal detail with rating page"
+                src={MOONGOAT_IMG}
+                alt="Moongoat itinerary journal spread"
                 className="w-full rounded-2xl shadow-xl"
                 style={{ objectFit: "cover", aspectRatio: "4/3" }}
               />
             </FadeSection>
           </div>
         </div>
+      </section>
+
+      {/* ── COFFEE SHOP IMAGE ── */}
+      <section className="container py-20">
+        <FadeSection>
+          <div className="rounded-3xl overflow-hidden">
+            <img
+              src={COFFEE_SHOP_IMG}
+              alt="Thank You Coffee Anaheim with cat and journal"
+              className="w-full object-cover"
+              style={{ maxHeight: 500 }}
+            />
+          </div>
+        </FadeSection>
       </section>
 
       {/* ── GIFT CALLOUT ── */}
@@ -362,11 +378,12 @@ export default function Home() {
                 </span>
               </h2>
               <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#3a5c35", maxWidth: "40ch" }}>
-                Grab one for yourself and use it with different girlfriends at different spots, or each get your own and document every visit together. Either way, it's the cutest gift.
+                Get one for yourself and use it with different friends at different shops. Or each grab one and meet up every time you hit a new spot together. Either way, you'll keep the memories.
               </p>
               <a
                 href="https://buy.stripe.com/4gM9ATeZr9XE4s08qncfK00"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block font-label font-medium px-8 py-3.5 rounded-full transition-all duration-200 text-base"
                 style={{ background: "#3a5c35", color: "#ffffff", letterSpacing: "0.04em" }}
                 onMouseEnter={e => { e.currentTarget.style.background = "#4f7848"; e.currentTarget.style.transform = "scale(1.03)"; }}
@@ -386,20 +403,20 @@ export default function Home() {
           <FadeSection>
             <p className="font-label text-xs tracking-widest uppercase mb-2" style={{ color: "#a8c4a2", letterSpacing: "0.2em" }}>limited time offer</p>
             <h2 className="font-display font-bold mb-2" style={{ color: "#ffffff", fontSize: "clamp(2.2rem, 5vw, 3.8rem)" }}>
-              10% Off Right Now
+              10% Off Now
             </h2>
             <p className="font-script" style={{ color: "#c8ddc4", fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}>
-              don't wait on this one.
+              use promo code at checkout.
             </p>
           </FadeSection>
           <FadeSection delay={150}>
             <p className="font-body text-base leading-relaxed" style={{ color: "#c8ddc4", maxWidth: "44ch" }}>
-              Sunday Sips &amp; Yap is the cutest way to explore Orange County with your bestie and make memories worth keeping.
+              For the girlies who are actively invested in true friendships. Explore 10 of the cutest coffee shops in Orange County. Rate the vibes. Answer prompts that actually matter.
             </p>
           </FadeSection>
           <FadeSection delay={280}>
             <a
-              href="https://girljournal.com"
+              href="https://buy.stripe.com/4gM9ATeZr9XE4s08qncfK00"
               target="_blank"
               rel="noopener noreferrer"
               className="font-label font-medium px-10 py-4 rounded-full transition-all duration-200 text-lg mt-2"
